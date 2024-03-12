@@ -28,5 +28,21 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        prev(){
+            this.activeObject--
+            console.log(this.activeObject);
+            if(this.activeObject < 0){
+                this.activeObject = this.slides.length -1
+            }
+        },
+        next(){
+            this.activeObject++
+            console.log(this.activeObject);
+            if(this.activeObject >= this.slides.length){
+                this.activeObject = 0
+            }
+        },
     }
 }).mount(`#app`)
