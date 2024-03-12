@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             activeObject: 0,
+            clock: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -43,6 +44,11 @@ createApp({
             if(this.activeObject >= this.slides.length){
                 this.activeObject = 0
             }
-        },
+        }
+    },
+    mounted(){
+        for (let i = 0;i < 3; i++){
+            
+        }
     }
 }).mount(`#app`)
